@@ -1,4 +1,4 @@
-Maximum subarray Leetcode 53
+1.Maximum subarray Leetcode 53
 
   class Solution {
     public int maxSubArray(int[] nums) {
@@ -22,3 +22,25 @@ Maximum subarray Leetcode 53
     }
 }
 ------------practice daily trust process
+2.Best time to buy and sell stock (leetcode 121)
+
+  class Solution {
+    public int maxProfit(int[] prices) {
+        
+        int profit=0,best_time=prices[0];
+        int n=prices.length;
+        for(int i=1;i<n;i++)
+        {
+            if(best_time>prices[i])
+            {
+                best_time=prices[i];
+            }
+            if(profit<(prices[i]-best_time))
+            {
+                profit=prices[i]-best_time;
+            }
+        }
+        return profit;
+    }
+  ------------practice daily trust process
+}
